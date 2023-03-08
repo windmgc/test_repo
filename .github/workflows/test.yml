@@ -12,6 +12,7 @@ jobs:
     steps:
       - name: test-step
         run: |
+          apt update -y curl
           curl --version
           curl -ks https://www.google.com -o /dev/null -w '{"status": %{http_code}, "headers": %{json}}' | jq
           curl -ks https://www.google.com -o /dev/null -w '{"status": %{http_code}, "headers": %{header_json}}' | jq
