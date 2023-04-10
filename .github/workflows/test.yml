@@ -18,4 +18,4 @@ jobs:
           # A list of files, directories, and wildcard patterns to cache and restore
           path: src/assets/images
           # An explicit key for restoring and saving the cache
-          key: ci-build-${{ hashFiles('.github/workflows/test.yml', 'abc') }}
+          key: ci-build-${{ hashFiles('.github/workflows/test.yml', 'abc', 'README.md') }}
