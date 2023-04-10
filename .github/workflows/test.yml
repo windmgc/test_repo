@@ -22,4 +22,4 @@ jobs:
           # A list of files, directories, and wildcard patterns to cache and restore
           path: src/assets/images
           # An explicit key for restoring and saving the cache
-          key: ${{ hashFiles('.abc', 'src/assets/images/abc')
+          key: ${{ hashFiles('.abc', 'src/assets/images/abc') }}
