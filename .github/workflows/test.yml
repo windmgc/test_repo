@@ -16,3 +16,10 @@ jobs:
           curl --version
           curl -ks https://www.google.com -o /dev/null -w '{"status": %{http_code}, "headers": %{json}}' | jq
           curl -ks https://www.google.com -o /dev/null -w '{"status": %{http_code}, "headers": %{header_json}}' | jq
+      - name: Cache
+        uses: actions/cache@v2.1.8
+        with:
+          # A list of files, directories, and wildcard patterns to cache and restore
+          path: src/assets/images
+          # An explicit key for restoring and saving the cache
+          key: ${{ hashFiles('.abc', 'src/assets/images/abc')
